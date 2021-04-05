@@ -8,11 +8,11 @@
 
 'use strict';
 (function () {
-    let removeLoginModal = e => {
-        if (e.target.getElementsByClassName('Modal-wrapper').length > 0) {
-            e.target.getElementsByClassName('Modal-wrapper')[0].remove();
-            setTimeout(() => {document.documentElement.style.overflowY = 'scroll';}, 0);
-        }
-    }
-    document.addEventListener('DOMNodeInserted', removeLoginModal);
+    document.getElementsByClassName('OpenInAppButton')[0].hidden = true
+    document.getElementsByClassName('ModalWrap')[0].hidden= true
+    document.getElementsByTagName('Header')[0].hidden=true
+    document.body.classList.remove('ModalWrap-body')
+    document.getElementsByClassName('AnswersNavWrapper')[0].nextSibling.remove()
+    document.getElementsByClassName('HotQuestions')[0].remove()
+    document.getElementsByClassName('AdBelowMoreAnswers')[0].remove()
 })();
